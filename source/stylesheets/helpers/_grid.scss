@@ -1,0 +1,109 @@
+.wrap {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  grid-column-start: 1;
+  grid-column-end: span 8;
+  grid-row-start: 1;
+  /* 物件起始線 */
+  grid-row-end: 1;
+  /* 不設定終點線 */
+  border: 1px solid red;
+  height: 100px;
+}
+
+main {
+  display: grid;
+  grid-auto-columns: 120px;
+  grid-auto-rows: 100px;
+  grid-auto-flow: row;
+  width: 960px; // min-height: 100vh;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+.product-1 {
+  grid-column-start: 1;
+  /* 物件起始線 */
+  grid-column-end: span 4;
+  /* 終點線 = 物件所佔的空間數 */
+  grid-row-start: 2;
+  /* 物件起始線 */
+  grid-row-end: span 4;
+  /* 終點線 */
+  border: 1px solid red;
+}
+
+.product-2 {
+  grid-column-start: 6;
+  /* 物件起始線 */
+  grid-column-end: span 2;
+  /* 終點線 = 物件所佔的空間數 */
+  grid-row-start: 3;
+  /* 物件起始線 */
+  grid-row-end: span 2;
+  /* 終點線 */
+  border: 1px solid blue;
+}
+
+.product-3 {
+  grid-column-start: 1;
+  /* 物件起始線 */
+  grid-column-end: span 4;
+  /* 終點線 = 物件所佔的空間數 */
+  grid-row-start: 8;
+  /* 物件起始線 */
+  grid-row-end: span 2;
+  /* 終點線 */
+  border: 1px solid red;
+}
+
+.product-4 {
+  grid-column-start: 7;
+  /* 物件起始線 */
+  grid-column-end: span 2;
+  /* 終點線 = 物件所佔的空間數 */
+  grid-row-start: 8;
+  /* 物件起始線 */
+  grid-row-end: span 4;
+  /* 終點線 */
+  border: 1px solid blue;
+}
+
+.product-5 {
+  grid-column-start: 3;
+  /* 物件起始線 */
+  grid-column-end: span 2;
+  /* 終點線 = 物件所佔的空間數 */
+  grid-row-start: 12;
+  /* 物件起始線 */
+  grid-row-end: span 2;
+  /* 終點線 */
+  border: 1px solid red;
+}
+
+.product-6 {
+  grid-column-start: 5;
+  /* 物件起始線 */
+  grid-column-end: span 4;
+  /* 終點線 = 物件所佔的空間數 */
+  grid-row-start: 14;
+  /* 物件起始線 */
+  grid-row-end: span 4;
+  /* 終點線 */
+  border: 1px solid blue;
+}
+
+.product-7 {
+  grid-column-start: 1;
+  /* 物件起始線 */
+  grid-column-end: span 2;
+  /* 終點線 = 物件所佔的空間數 */
+  grid-row-start: 16;
+  /* 物件起始線 */
+  grid-row-end: span 4;
+  /* 終點線 */
+  border: 1px solid red;
+}

@@ -1,4 +1,141 @@
 body {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Microsoft JhengHei", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; // text-align: justify;
   // text-justify: auto;
+  display: grid;
+  color: $black;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    padding: 1px 10px;
+    background-color: $black;
+    color: $white;
+  }
+  .h1 {
+    font-size: 72px;
+    font-weight: bolder;
+  }
+}
+
+// ====  主要區域  ====
+.product {
+  position: relative;
+}
+
+.product-title {
+  position: absolute;
+  font-weight: bolder;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+// 文字漸層
+@mixin productText($product-title) {
+  .product-title::before,
+  .product-title::after {
+    content: $product-title;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 21px;
+    overflow: hidden;
+  }
+  .product-title::before {
+    color: rgba(0, 0, 0, 0.30);
+    top: -14px;
+  }
+  .product-title::after {
+    color: rgba(0, 0, 0, 0.10);
+    top: -28px;
+  }
+}
+
+// 圖片設置
+@mixin productImg($product-img) {
+  background-image: url($product-img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin linear-gradient {
+  background: repeating-linear-gradient(135deg, #50E3C2, #50E3C2 11.5px, transparent 11.5px, transparent 27px, #50E3C2 27px, #50E3C2 35.5px);
+}
+
+.product-num {
+  font-weight: bolder;
+  font-size: 48px;
+  line-height: 48px;
+  position: absolute;
+  top: 100%;
+}
+
+.product-subtitle {
+  position: absolute;
+  transform: rotate(-270deg);
+  font-size: 24px;
+  font-weight: bolder;
+  font-style: italic;
+  top: 345px;
+  left: 90%;
+  white-space: nowrap;
+}
+
+.product-1 {
+  .product-title {
+    top: -14px;
+  }
+  @include productText("LINEN BLAZER");
+  @include productImg("https://images.unsplash.com/photo-1513827379601-9dba5099a3f9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1acdd78f34ee75aade9e313251bb1695&auto=format&fit=crop&w=2134&q=80");
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 240px;
+    height: 100px;
+    bottom: -50px;
+    left: 50px;
+    @include linear-gradient;
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 240px;
+    height: 200px;
+    top: -50px;
+    right: -60px;
+    border: 20px solid $primary;
+    z-index: -1;
+  }
+}
+
+.product-2 {
+  @include productText("FREELIFT");
+}
+
+.product-3 {
+  @include productText("SUPER SKINNY");
+}
+
+.product-4 {
+  @include productText("DENIM");
+}
+
+.product-5 {
+  @include productText("SWEATSHIRTS");
+}
+
+.product-6 {
+  @include productText("VINTAGE DENIM");
+}
+
+.product-7 {
+  @include productText("EDITION");
 }
