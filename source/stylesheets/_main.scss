@@ -98,7 +98,6 @@ header {
 
 .product-1 {
   .product-title {
-    position: absolute;
     top: -14px;
   }
   @include productText;
@@ -116,16 +115,16 @@ header {
   &::after {
     width: ($width-span*2);
     height: $height-span;
-    bottom: -50px;
-    left: 50px;
+    bottom: (-$height-span/2);
+    left: ($width-span/2);
     @include linear-gradient;
   }
-  /*背後方*/
-  框 &::before {
+  /*背後方框*/
+  &::before {
     width: ($width-span*2);
-    height: 200px;
-    top: -50px;
-    right: -60px;
+    height: $height-span*2;
+    top: (-$height-span/2);
+    right: (-$width-span/2);
     border: 20px solid $primary;
     z-index: -1;
   }
@@ -149,8 +148,8 @@ header {
     right: $width-span;
   }
   /*  區塊裝飾   */
-  /*背後方*/
-  框 &::after {
+  /*背後方框*/
+  &::after {
     width: ($width-span*2);
     height: ($height-span*2);
     top: (-$height-span);
@@ -210,23 +209,153 @@ header {
 /*區塊4*/
 
 .product-4 {
+  .product-title {
+    transform: rotate(270deg);
+    top: 46px;
+    right: 78%;
+  }
   @include productText;
+  @include productImg("https://images.unsplash.com/photo-1484516758160-69878111a911?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39466d66952b133d5a5cff642b970d05&auto=format&fit=crop&w=687&q=80");
+  .product-num {
+    bottom: 0;
+    right: 100%;
+  }
+  .product-subtitle {
+    transform: rotate(-270deg) translateX(-50%);
+    bottom: 97%;
+    left: ($width-span)-5px;
+  }
+  /*  區塊裝飾   */
+  /*漸層*/
+  &::after {
+    width: ($width-span*2);
+    height: $height-span;
+    bottom: (-$height-span/2);
+    left: 0;
+    @include linear-gradient;
+  }
+  /*背後方框*/
+  &::before {
+    width: ($width-span*2);
+    height: $height-span*2;
+    top: (-$height-span);
+    left: (-$width-span/2);
+    border: 20px solid $primary;
+    z-index: -1;
+  }
 }
 
 /*區塊5*/
 
 .product-5 {
+  .product-title {
+    bottom: $height-span;
+    left: (-$width-span*2);
+    z-index: 10;
+  }
   @include productText;
+  @include productImg("https://images.unsplash.com/photo-1525448198276-222de3961638?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=43fb25556cdbd191e520c7f28739e40d&auto=format&fit=crop&w=1350&q=80");
+  .product-num {
+    bottom: 0;
+    left: (-$width-span);
+  }
+  .product-subtitle {
+    top: 0px;
+    left: calc( 100% + 3px);
+  }
+  /*  區塊裝飾   */
+  /*漸層*/
+  &::after {
+    width: ($width-span*2);
+    height: $height-span;
+    top: (-$height-span/2);
+    left: (-$width-span*1.5);
+    @include linear-gradient;
+  }
+  /*背後方框*/
+  &::before {
+    width: ($width-span*2);
+    height: $height-span;
+    bottom: (-$height-span/2);
+    left: (-$width-span);
+    border: 20px solid $primary;
+    z-index: -1;
+  }
 }
 
 /*區塊6*/
 
 .product-6 {
+  .product-title {
+    top: -$height-span/2;
+    right: 0px;
+  }
   @include productText;
+  @include productImg("https://images.unsplash.com/photo-1519406709381-c1f293304b28?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98c497a29f229085d9574ee8b6eeef8c&auto=format&fit=crop&w=634&q=80");
+  .product-num {
+    bottom: $height-span*2;
+    right: 100%;
+  }
+  .product-subtitle {
+    top: 100%;
+    right: $width-span*1.5;
+  }
+  /*  區塊裝飾   */
+  /*背後方框*/
+  &::after {
+    width: ($width-span*4);
+    height: ($height-span*2);
+    bottom: (-$height-span/2);
+    right: 0px;
+    border: 20px solid $primary;
+    z-index: -2;
+  }
+  /*背後方框*/
+  &::before {
+    width: ($width-span*2);
+    height: ($height-span*2);
+    bottom: 0px;
+    left: (-$width-span*.5);
+    background-color: $primary;
+    z-index: -1;
+  }
 }
 
 /*區塊7*/
 
 .product-7 {
+  .product-title {
+    transform: rotate(-270deg) translateX(35%);
+    top: 0px;
+    left: 73%;
+  }
   @include productText;
+  @include productImg("https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=63ff45d79414b3166b08b800a32018be&auto=format&fit=crop&w=634&q=80");
+  .product-num {
+    bottom: 0px;
+    right: (-$width-span);
+  }
+  .product-subtitle {
+    bottom: 100%;
+    left: 0px;
+  }
+  /*  區塊裝飾   */
+  /*背後方框*/
+  &::after {
+    width: ($width-span*2);
+    height: ($height-span*3);
+    top: (-$height-span/2);
+    right: (-$width-span/2);
+    border: 20px solid $primary;
+    z-index: -2;
+  }
+  /*背後方框*/
+  &::before {
+    width: ($width-span*2);
+    height: ($height-span*2);
+    bottom: 0px;
+    left: $width-span;
+    background-color: $primary;
+    z-index: -1;
+  }
 }

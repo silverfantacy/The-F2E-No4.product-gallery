@@ -12,7 +12,7 @@ header {
   /* 物件起始線 */
   grid-row-end: 1;
   /* 不設定終點線 */
-  border: 1px solid red;
+  // border: 1px solid red;
   height: $height-span;
 }
 
@@ -23,7 +23,7 @@ main {
   grid-auto-flow: row;
   width: 960px; // min-height: 100vh;
   margin: 0 auto;
-  border: 1px solid #000;
+  // border: 1px solid #000;
 }
 
 .product-1 {
@@ -35,7 +35,7 @@ main {
   /* 物件起始線 */
   grid-row-end: span 4;
   /* 終點線 */
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 .product-2 {
@@ -47,7 +47,7 @@ main {
   /* 物件起始線 */
   grid-row-end: span 2;
   /* 終點線 */
-  border: 1px solid blue;
+  // border: 1px solid blue;
 }
 
 .product-3 {
@@ -59,7 +59,7 @@ main {
   /* 物件起始線 */
   grid-row-end: span 2;
   /* 終點線 */
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 .product-4 {
@@ -71,7 +71,7 @@ main {
   /* 物件起始線 */
   grid-row-end: span 4;
   /* 終點線 */
-  border: 1px solid blue;
+  // border: 1px solid blue;
 }
 
 .product-5 {
@@ -83,7 +83,7 @@ main {
   /* 物件起始線 */
   grid-row-end: span 2;
   /* 終點線 */
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 .product-6 {
@@ -95,7 +95,7 @@ main {
   /* 物件起始線 */
   grid-row-end: span 4;
   /* 終點線 */
-  border: 1px solid blue;
+  // border: 1px solid blue;
 }
 
 .product-7 {
@@ -107,5 +107,5 @@ main {
   /* 物件起始線 */
   grid-row-end: span 4;
   /* 終點線 */
-  border: 1px solid red;
+  // border: 1px solid red;
 }
